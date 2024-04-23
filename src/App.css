@@ -15,5 +15,5 @@
     grid-template-columns: 1fr 3fr 2fr;
 	grid-template-rows: 1fr auto;
     overflow: hidden;
-    background-image: url('/public/Background.jpg');
+    background-image: url('/Background.jpg');
 }
