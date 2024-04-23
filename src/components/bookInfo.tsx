@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Bird from "../assets/BirdIcon";
+import Delete from "../assets/Delete";
 import Heart from "../assets/heart";
 import { useBooksStore } from "../store/booksStore";
 
@@ -56,7 +57,7 @@ export default function BookInfo() {
                     </div>
                     {BookSaved ? 
                         <button className="rounded-full bg-red-600 fill-white w-[5vh] p-2 m-3" onClick={handledClickRemove}>
-                        <Heart />
+                        <Delete />
                         </button>
                     :
                         <button className="rounded-full bg-blue-600 fill-white w-[5vh] p-2 m-3" onClick={handledClick}>
