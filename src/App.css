@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app ::-webkit-scrollbar{
+    display: none;
+}
+
+#app {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "books books info"
+    ;
+    grid-template-columns: 1fr 3fr 2fr;
+	grid-template-rows: 1fr auto;
+    overflow: hidden;
+    background-image: url('/public/Background.jpg');
+}
