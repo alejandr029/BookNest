@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Book } from '../Services/dataServices';
 import { useBooksStore } from '../store/booksStore';
 
@@ -10,12 +9,6 @@ interface BooksCardsProps {
 const BooksCards: React.FC<BooksCardsProps> = ({ BookInfo, Saved }) => {
     const {setSelectedBook, setBooksSaved,removeBooksSaved, BooksSaved}  = useBooksStore();
 
-    const [isSaved, setIsSaved] = useState(false);
-
-    // useEffect(() => {
-    //     BooksSaved.filter((book) => book.title === BookInfo.title).length > 0 ? console.log('true') : console.log('false');
-    // })
-
     const handledClickInfo = () => {
         setSelectedBook(BookInfo);
         
@@ -23,13 +16,11 @@ const BooksCards: React.FC<BooksCardsProps> = ({ BookInfo, Saved }) => {
     
     const handledClickAdd = () => {
         if(!BooksSaved.some((book) => book.title === BookInfo.title)){
-            setIsSaved(true);
             setBooksSaved([...BooksSaved, BookInfo]);
         }
     }
 
     const handledClickRemove = () => {
-        setIsSaved(false);
         removeBooksSaved(BookInfo);
     }
 
